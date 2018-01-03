@@ -11,7 +11,6 @@
     <title>TEDxSPIT</title>
 
     <!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
@@ -25,10 +24,9 @@
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
 	
+	<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	
-	<!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
 
   </head>
   
@@ -126,121 +124,9 @@
         });
     });
 })(jQuery);
-
-$(document).ready(function() {
-  //Set the carousel options
-  $('#quote-carousel').carousel({
-    pause: true,
-    interval: 4000,
-  });
-});
-
 </script>
 
 <style>
-
-	/* carousel */
-	#quote-carousel 
-	{
-	  padding: 0 10px 30px 10px;
-	  margin-top: 30px;
-	}
-
-	/* Control buttons  */
-	#quote-carousel .carousel-control
-	{
-	  background: none;
-	  color: #222;
-	  font-size: 2.3em;
-	  text-shadow: none;
-	  margin-top: 30px;
-	}
-	/* Previous button  */
-	#quote-carousel .carousel-control.left 
-	{
-	  left: -12px;
-	}
-	/* Next button  */
-	#quote-carousel .carousel-control.right 
-	{
-	  right: -12px !important;
-	}
-	/* Changes the position of the indicators */
-	#quote-carousel .carousel-indicators 
-	{
-	  right: 50%;
-	  top: auto;
-	  bottom: 0px;
-	  margin-right: -19px;
-	}
-	/* Changes the color of the indicators */
-	#quote-carousel .carousel-indicators li 
-	{
-	  background: #c0c0c0;
-	}
-	#quote-carousel .carousel-indicators .active 
-	{
-	  background: #333333;
-	}
-	#quote-carousel img
-	{
-	  width: 250px;
-	  height: 100px
-	}
-	/* End carousel */
-
-	.item blockquote {
-		border-left: none; 
-		margin: 0;
-	}
-
-	.item blockquote img {
-		margin-bottom: 10px;
-	}
-
-	.item blockquote p:before {
-		content: "\f10d";
-		font-family: 'Fontawesome';
-		float: left;
-		margin-right: 10px;
-	}
-
-
-
-	/**
-	  MEDIA QUERIES
-	*/
-
-	/* Small devices (tablets, 768px and up) */
-	@media (min-width: 768px) { 
-		#quote-carousel 
-		{
-		  margin-bottom: 0;
-		  padding: 0 40px 30px 40px;
-		}
-		
-	}
-
-	/* Small devices (tablets, up to 768px) */
-	@media (max-width: 768px) { 
-		
-		/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
-		
-		#quote-carousel .carousel-indicators {
-			bottom: -20px !important;  
-		}
-		#quote-carousel .carousel-indicators li {
-			display: inline-block;
-			margin: 0px 5px;
-			width: 15px;
-			height: 15px;
-		}
-		#quote-carousel .carousel-indicators li.active {
-			margin: 0px 5px;
-			width: 20px;
-			height: 20px;
-		}
-	}
 
 	.mu-event-counter-area {
 	display: inline;
@@ -333,12 +219,12 @@ $(document).ready(function() {
 	}
 </style>
 
-  <body id="page-top" style="font-size : 175%">
+  <body id="page-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="padding-top: 1rem; font-size: 2rem;">TEDxSPIT Home</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">TEDxSPIT Home</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -362,69 +248,16 @@ $(document).ready(function() {
     padding-top: 0px;
     padding-bottom: 0px;
 	">
-      <div class="container mx-auto my-auto" style="
+      <div class="container <!--my-auto-->" style="
     padding-top: 0px;
     padding-bottom: 0px;
 	">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h1>
-              <strong>TEDxSPIT</strong>
+            <h2>
+              <br><strong>TEDxSPIT</strong><br><br><br><br><br><br>
 			  <!--<strong id="counter-main"></strong>-->
-            </h1>
-			
-			<div class="container">
-			  <div class='row'>
-				<div class='col-md-offset-0 col-md-12'>
-				  <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-					<!-- Bottom Carousel Indicators -->
-					
-					<!-- Carousel Slides / Quotes -->
-					<div class="carousel-inner">
-					
-					  <!-- Quote 1 -->
-					  <div class="item active">
-						<blockquote>
-						  <div class="row">
-							<div class="col-sm-12">
-							  <p>We are all in the gutter, but some of us are looking at the stars.</p>
-							  <small>Oscar Wilde</small>
-							</div>
-						  </div>
-						</blockquote>
-					  </div>
-					  <!-- Quote 2 -->
-					  <div class="item">
-						<blockquote>
-						  <div class="row">
-							<div class="col-sm-12">
-							  <p>How do you know what you're going to do till you do it?</p>
-							  <small>Holden Caulfield</small>
-							</div>
-						  </div>
-						</blockquote>
-					  </div>
-					  <!-- Quote 3 -->
-					  <div class="item">
-						<blockquote>
-						  <div class="row">
-							<div class="col-sm-12">
-							  <p>I can see the beauty of glass objects fully at the moment when they slip from my hand.</p>
-							  <small>Andrew Solomon</small>
-							</div>
-						  </div>
-						</blockquote>
-					  </div>
-					</div>
-					
-					<!-- Carousel Buttons Next/Prev -->
-					<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
-					<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
-				  </div>                          
-				</div>
-			  </div>
-			</div>
-			
+            </h2>
 			<div class="mu-event-counter-area">
 			<div id="mu-event-counter">
 				<!--<span class="mu-event-counter-block"><span id="days">776</span> Days</span> 
@@ -437,10 +270,10 @@ $(document).ready(function() {
           <div class="col-lg-8 mx-auto">
 		  <br><br><br>
             <p class="text-faded mb-5">Learning is an attribute that human beings take pride in. In fact, the idea of grasping knowledge has made it a mandatory survival skill which has sprouted to seeds of development in the era. Here at TEDx we facilitate the propagation of pure, unadulterated and intriguing information that several people can retain, enjoy and most importantly apply in real life.</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about" style="font-size: 1.4rem;">Find Out More</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
           </div>
+        </div>
       </div>
-	  </div>	
     </header>
 
     <section class="bg-primary" id="about" style="
@@ -448,7 +281,7 @@ $(document).ready(function() {
     padding-bottom: 0px;
 	">
       <div class="container">
-	    <br><br>
+	    <br><br><br>
 		<h2 class="section-heading text-white" align = "center">About Us</h2>
         <div class="row">
           <div class="col-lg-5 mx-auto">
@@ -471,7 +304,7 @@ $(document).ready(function() {
             <h2 class="section-heading text-white">TEDx SPIT</h2>
             <hr class="light my-4">
             <p class="text-faded mb-4">We the students of Sardar Patel Institute of Technology, since 1995 have sought to bring knowledge to the most easily reachable sector of the surface for others. This year we have been honoured with a TEDx license which entitles us to host a TED talk where several influential and charismatic personalities will share their experience and showcase their knowledge. The talk is part of our annual cultural fest, UDAAN and is a pre-event.</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#portfolio" style="font-size: 1.4rem;">Get Started!</a>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#portfolio">Get Started!</a>
           </div>
 		</div>
 		<br><br><br>
@@ -531,7 +364,7 @@ $(document).ready(function() {
 								<div class="col-md-3">
 								</div>
 								<div class="col-md-6">
-								<h4 class="modal-title text-center">TEDxSPIT</h4>
+								<h4 class="modal-title text-center">Attend TEDx SPIT</h4>
 								</div>
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
@@ -539,7 +372,7 @@ $(document).ready(function() {
 								<div class="col-md-3">
 								</div>
 								<div class="col-md-6" align="center">
-									<h4 align="center">Content Unavailable</h4>
+									<h4 align="center">14th October 2017</h4>
 								</div>
 								<div class="col-md-3">
 								</div>
@@ -548,7 +381,9 @@ $(document).ready(function() {
 								<div class="col-md-2">
 								</div>
 								<div class="col-md-8" align="center">
-									<p>Sorry! The website is still under maintenence</p>
+									<p>Samvaad Auditorium, <br>
+									Fr.Conceicao Rodrigues College of Engineering,<br> 
+									Bandstand, Bandra 400050.</p>
 								</div>
 								<div class="col-md-2">
 								</div>
@@ -679,12 +514,12 @@ $(document).ready(function() {
         <div class="row">
           <div class="col-lg-4 ml-auto text-center">
             <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>+91-9987014677</p>
+            <p>123-456-6789</p>
           </div>
           <div class="col-lg-4 mr-auto text-center">
             <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
             <p>
-              <a href="mailto:your-email@your-domain.com">info@tedxspit.com</a>
+              <a href="mailto:your-email@your-domain.com">feedback@tedxspit.com</a>
             </p>
           </div>
         </div>
