@@ -146,7 +146,7 @@ $(document).ready(function() {
 
 <style>
 
-	.preload {
+	.preloader {
 	  position: absolute;
 	  top: 50%;
 	  left: 50%;
@@ -160,7 +160,18 @@ $(document).ready(function() {
 	@keyframes spin {
 		0% { -webkit-transform:rotate(0deg); }
 		100% { -webkit-transform:rotate(360deg); }
-	}	
+	}
+
+	#status  {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #fefefe;
+     z-index: 99;
+    height: 100%;
+ }
 
 	body
 	{
@@ -371,13 +382,15 @@ $(document).ready(function() {
 		// makes sure the whole site is loaded
 	jQuery(window).load(function() {
 			// will first fade out the loading animation
-		jQuery("#status").fadeOut();
+		jQuery("#preloader").fadeOut();
 			// will fade out the whole DIV that covers the website.
-		jQuery("#preloader").delay(1000).fadeOut("slow");
+		jQuery("#status").delay(1000).fadeOut("slow");
 	})
 	</script>
-
-	<div class="preloader"></div>
+	
+	<div id="status">
+	  <div id="preloader">&nbsp;</div>
+	</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
