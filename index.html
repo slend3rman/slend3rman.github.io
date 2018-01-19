@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+	<link rel="shortcut icon" href="img/favicon.ico" />
     <title>TEDxSPIT</title>
 
     <!-- Bootstrap core CSS -->
@@ -18,6 +19,12 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	
+	<!--Added fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -138,6 +145,15 @@ $(document).ready(function() {
 </script>
 
 <style>
+
+	body
+	{
+		font-family: 'Raleway', sans-serif;
+	}
+	
+	.product .img-responsive {
+		margin: 0 auto;
+	}
 
 	/* carousel */
 	#quote-carousel 
@@ -367,8 +383,8 @@ $(document).ready(function() {
 	">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h1>
-              <strong>TEDxSPIT</strong>
+            <h1 align="center">
+              <strong></strong><!--<img align="center" src="img/tedxspit.png" class="center-block img-responsive" alt="Cinque Terre" style = "max-width: 160px; height: auto;"></strong>-->
 			  <!--<strong id="counter-main"></strong>-->
             </h1>
 			
@@ -379,15 +395,15 @@ $(document).ready(function() {
 					<!-- Bottom Carousel Indicators -->
 					
 					<!-- Carousel Slides / Quotes -->
-					<div class="carousel-inner">
+					<div class="carousel-inner" style="font-family: 'Julius Sans One', sans-serif; font-size: 200%;">
 					
 					  <!-- Quote 1 -->
 					  <div class="item active">
 						<blockquote>
 						  <div class="row">
 							<div class="col-sm-12">
-							  <p>We are all in the gutter, but some of us are looking at the stars.</p>
-							  <small>Oscar Wilde</small>
+							  <p style="font-size: 160%;">We are all in the gutter, but some of us are looking at the stars.</p>
+							  <small style="color: #FFFFFF">Oscar Wilde</small>
 							</div>
 						  </div>
 						</blockquote>
@@ -397,8 +413,8 @@ $(document).ready(function() {
 						<blockquote>
 						  <div class="row">
 							<div class="col-sm-12">
-							  <p>How do you know what you're going to do till you do it?</p>
-							  <small>Holden Caulfield</small>
+							  <p style="font-size: 160%;">How do you know what you're going to do till you do it?</p>
+							  <small style="color: #FFFFFF">Holden Caulfield</small>
 							</div>
 						  </div>
 						</blockquote>
@@ -408,8 +424,8 @@ $(document).ready(function() {
 						<blockquote>
 						  <div class="row">
 							<div class="col-sm-12">
-							  <p>I can see the beauty of glass objects fully at the moment when they slip from my hand.</p>
-							  <small>Andrew Solomon</small>
+							  <p style="font-size: 160%;">I can see the beauty of glass objects fully at the moment when they slip from my hand.</p>
+							  <small style="color: #FFFFFF">Andrew Solomon</small>
 							</div>
 						  </div>
 						</blockquote>
@@ -425,7 +441,7 @@ $(document).ready(function() {
 			</div>
 			
 			<div class="mu-event-counter-area">
-			<div id="mu-event-counter">
+			<div id="mu-event-counter" style="font-family: 'Audiowide', cursive;">
 				<!--<span class="mu-event-counter-block"><span id="days">776</span> Days</span> 
 				<span class="mu-event-counter-block"><span id="hours">02</span> Hours</span> 
 				<span class="mu-event-counter-block"><span id="mins">09</span> Mins</span> 
@@ -445,20 +461,22 @@ $(document).ready(function() {
     <section class="bg-primary" id="about" style="
     padding-top: 0px;
     padding-bottom: 0px;
-	">
-      <div class="container">
+	" >
+	<div class="container-fluid" style="background-color: #e43024;">
+      <div class="container" style="background-color: #e43024; text-align: justify;
+    text-justify: auto;">
 	    <br><br>
-		<h2 class="section-heading text-white" align = "center">About Us</h2>
+		<h2 class="section-heading text-white" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">About Us</h2>
         <div class="row">
           <div class="col-lg-5 mx-auto">
-            <h2 class="section-heading text-white text-center">TED</h2>
+            <h2 class="section-heading text-white text-center" style="font-family: 'Megrim', cursive;">TED</h2>
             <hr class="light my-4">
             <p class="text-faded mb-4">TED is a global foundation devoted to the overall mission of “Ideas Worth Spreading”. It started in 1984 as a conference bringing together people from three worlds: Technology, Entertainment, Design. Since then, its scope has become ever broader. With its two annual conferences, video website TED.com, initiatives and community projects, TED is now a platform and a global movement focused on meaningful change through the power of ideas. Few notable TED Speakers are Bill Gates, Al Gore, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala,Isabel Allende and UK Prime Minister GordonBrown.</p>
           </div>
 		  <div class="col-lg-1 mx-auto text-center">
 		  </div>
 		  <div class="col-lg-5 mx-auto">
-		  <h2 class="section-heading text-white text-center">TEDx</h2>
+		  <h2 class="section-heading text-white text-center" style="font-family: 'Megrim', cursive;">TEDx</h2>
             <hr class="light my-4">
             <p class="text-faded mb-4">TEDx was created in the spirit of TED’s mission, “Ideas Worth Spreading” at local levels. These self-organized events are branded TEDx, where x = independently organized TED event. The program is designed to give communities, organizations and individuals the opportunity to stimulate dialogue through TED-like experiences. At a TEDx event, TEDTalks videos and live speakers combine to spark deep discussion and connection in a small group. TEDx events are open source, local and community-driven events that inspire innovation, thought leadership and visionary insight. A TEDx license is free to obtain.</p>
             
@@ -467,14 +485,16 @@ $(document).ready(function() {
 		<br><br>
 		<div class="row">
 		<div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">TEDx SPIT</h2>
+            <h2 class="section-heading text-white" style="font-family: 'Megrim', cursive;">TEDx SPIT</h2>
             <hr class="light my-4">
-            <p class="text-faded mb-4">We the students of Sardar Patel Institute of Technology, since 1995 have sought to bring knowledge to the most easily reachable sector of the surface for others. This year we have been honoured with a TEDx license which entitles us to host a TED talk where several influential and charismatic personalities will share their experience and showcase their knowledge. The talk is part of our annual cultural fest, UDAAN and is a pre-event.</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#portfolio" style="font-size: 1.4rem;">Get Started!</a>
+            <p class="text-faded mb-4" style="text-align: justify;
+    text-justify: auto;">We the students of Sardar Patel Institute of Technology, since 1995 have sought to bring knowledge to the most easily reachable sector of the surface for others. This year we have been honoured with a TEDx license which entitles us to host a TED talk where several influential and charismatic personalities will share their experience and showcase their knowledge. The talk is part of our annual cultural fest, UDAAN and is a pre-event.</p>
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#portfolio" style="font-size: 1.4rem;">Get Started!</a>
           </div>
 		</div>
 		<br><br><br>
       </div>
+	  </div>
     </section>
 
 	<!--
@@ -670,7 +690,7 @@ $(document).ready(function() {
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <h2 class="section-heading" style="font-family: 'Megrim', cursive;">Let's Get In Touch!</h2>
             <hr class="my-4">
             <p class="mb-5">Have any queries, suggestions or feedbacks? Give us a call or send us an email and we will get back to you as soon as possible!</p>
           </div>
