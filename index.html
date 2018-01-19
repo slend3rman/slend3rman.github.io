@@ -146,7 +146,7 @@ $(document).ready(function() {
 
 <style>
 
-	.preloader {
+	.preload {
 	  position: absolute;
 	  top: 50%;
 	  left: 50%;
@@ -156,6 +156,7 @@ $(document).ready(function() {
 	  background: #C60B09;
 	  transform: rotate(45deg);
 	  animation: spin 1s infinite linear;
+	  z-index: 100;
 	}
 	@keyframes spin {
 		0% { -webkit-transform:rotate(0deg); }
@@ -377,8 +378,8 @@ $(document).ready(function() {
 </style>
 	
 	<div id="status">
-		<img align="center" src="img/white.png" class="center-block img-responsive" alt="Cinque Terre" style = "max-width: 600px; height: auto; padding-top:20%;">
-	  <div id="preloader"></div>
+		<img align="center" src="img/tedxspit.png" class="center-block img-responsive" alt="Cinque Terre" style = "max-width: 600px; height: auto; padding-top:20%;">
+	  <div id="preload"></div>
 	</div>
 
   <body onload="hide()" id="page-top" style="font-size : 175%">
@@ -387,9 +388,9 @@ $(document).ready(function() {
 		// makes sure the whole site is loaded
 	jQuery(window).load(function() {
 			// will first fade out the loading animation
-		jQuery("#preloader").fadeOut();
+		jQuery("#preload").fadeOut();
 			// will fade out the whole DIV that covers the website.
-		jQuery("#status").delay(1000).fadeOut("slow");
+		jQuery("#status").delay(500).fadeOut("slow");
 	})
 	</script>
 
@@ -426,7 +427,7 @@ $(document).ready(function() {
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h1 align="center">
-              <strong><img align="center" src="img/white.png" class="center-block img-responsive" alt="Cinque Terre" style = "max-width: 160px; height: auto;"></strong>
+              <strong></strong>
 			  <!--<strong id="counter-main"></strong>-->
             </h1>
 			
