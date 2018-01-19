@@ -146,13 +146,12 @@ $(document).ready(function() {
 
 <style>
 
-	.preload {
+	#preload {
 	  position: absolute;
-	  top: 50%;
-	  left: 50%;
+	  left: 47%;
 	  width: 60px;
 	  height: 60px;
-	  margin: -42px 0 0 -12px;
+	  margin: 20px 0 0 0;
 	  background: #C60B09;
 	  transform: rotate(45deg);
 	  animation: spin 1s infinite linear;
@@ -376,13 +375,13 @@ $(document).ready(function() {
 	  }
 	}
 </style>
-	
+
+  <body onload="hide()" id="page-top" style="font-size : 175%">
+
 	<div id="status">
 		<img align="center" src="img/tedxspit.png" class="center-block img-responsive" alt="Cinque Terre" style = "max-width: 600px; height: auto; padding-top:20%;">
 	  <div id="preload"></div>
 	</div>
-
-  <body onload="hide()" id="page-top" style="font-size : 175%">
 
 	<script>
 		// makes sure the whole site is loaded
