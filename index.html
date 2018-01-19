@@ -146,7 +146,21 @@ $(document).ready(function() {
 
 <style>
 
-	
+	.preload {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  width: 60px;
+	  height: 60px;
+	  margin: -42px 0 0 -12px;
+	  background: #C60B09;
+	  transform: rotate(45deg);
+	  animation: spin 1s infinite linear;
+	}
+	@keyframes spin {
+		0% { -webkit-transform:rotate(0deg); }
+		100% { -webkit-transform:rotate(360deg); }
+	}	
 
 	body
 	{
@@ -352,6 +366,8 @@ $(document).ready(function() {
 </style>
 
   <body id="page-top" style="font-size : 175%">
+
+	<div class="preload"></div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
