@@ -365,9 +365,19 @@ $(document).ready(function() {
 	}
 </style>
 
-  <body id="page-top" style="font-size : 175%">
+  <body onload="hide()" id="page-top" style="font-size : 175%">
 
-	<div class="preload"></div>
+	<script>
+		// makes sure the whole site is loaded
+	jQuery(window).load(function() {
+			// will first fade out the loading animation
+		jQuery("#status").fadeOut();
+			// will fade out the whole DIV that covers the website.
+		jQuery("#preloader").delay(1000).fadeOut("slow");
+	})
+	</script>
+
+	<div class="preloader"></div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
