@@ -83,6 +83,11 @@
     $(document).ready(function(){
 		$('#mainNav').hide();
     $('#attend-data').hide();
+    $('#speakers-data').hide();
+    $('#events-data').hide();
+    $('#talks-data').hide();
+    $('#partners-data').hide();
+    $('#register-data').hide();
     $('#Back').hide();
         $(window).scroll(function(){
             if ($(this).scrollTop() > 200) {
@@ -338,6 +343,8 @@ $(document).ready(function() {
 	  }
 	}
   #map {
+    position: relative;
+    top:0; bottom:0;
     height: 400px;
     width: 100%;
   }
@@ -507,20 +514,56 @@ $(document).ready(function() {
     </section>
 
     <script>
+
+    var current_selection = "";
+
+    function changeDiv(){
+
+      $(function(e){
+      initMap();
+      $('#links').fadeOut(300,function(){
+        $(current_selection).fadeIn(500,function(){
+          if(current_selection=='#attend-data'){
+              google.maps.event.addListener(map, "idle", function(){
+              google.maps.event.trigger(map, 'resize');
+          });
+        }
+        });
+        $('#Back').fadeIn(300);
+      });
+    });
+  }
+
     $(function() {
 
-      $("#attend").click(function(e) {
-        e.preventDefault();
-        var content = $(this).html();
-        initMap();
-        $('#links').fadeOut(300,function(){
-          $('#attend-data').fadeIn(500,function(){
-            google.maps.event.addListener(map, "idle", function(){
-                google.maps.event.trigger(map, 'resize');
-            });
-          });
-          $('#Back').fadeIn(300);
-        });
+      $("#attend").click(function(){
+        current_selection = '#attend-data';
+        changeDiv(current_selection);
+      });
+
+      $("#speakers").click(function(){
+        current_selection = '#speakers-data';
+        changeDiv(current_selection);
+      });
+
+      $("#events").click(function(){
+        current_selection = '#events-data';
+        changeDiv(current_selection);
+      });
+
+      $("#talks").click(function(){
+        current_selection = '#talks-data';
+        changeDiv(current_selection);
+      });
+
+      $("#partners").click(function(){
+        current_selection = '#partners-data';
+        changeDiv(current_selection);
+      });
+
+      $("#register").click(function(){
+        current_selection = '#register-data';
+        changeDiv(current_selection);
       });
 
       });
@@ -532,7 +575,7 @@ $(document).ready(function() {
       $("#Back").click(function(e) {
         e.preventDefault();
         var content = $(this).html();
-        $('#attend-data').fadeOut(300,function(){
+        $(current_selection).fadeOut(300,function(){
           $('#links').fadeIn(500);
           $('#Back').fadeOut(300);
         });
@@ -568,9 +611,9 @@ $(document).ready(function() {
           });
         function initMap() {
           var uluru = {lat: 19.123189, lng: 72.836133};
-          var cen = {lat : 19.171786, lng: 72.757622};
+          var cen = {lat : 19.123499, lng: 72.835765};
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
+            zoom: 20,
             center: cen
           });
           var marker = new google.maps.Marker({
@@ -586,6 +629,79 @@ $(document).ready(function() {
         <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnkSDTMK00svo3vSCDhXurwqHvwoEp_o8&callback=initMap">
         </script>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="speakers-data">
+    <div class="container">
+      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">Our Speakers</h2> <br><br>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <br><img src="img/speakers/nidhika.jpg" class="img-responsive img-circle" alt="Cinque Terre"><br>
+          <h1 align="center"> Nidhika Bahl </h2>
+          <p align="center">Life Coach</p>
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="events-data">
+    <div class="container">
+      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">Events</h2> <br><br>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="partners-data">
+    <div class="container">
+      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">Our Partners</h2> <br><br>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="talks-data">
+    <div class="container">
+      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">Our Talks</h2> <br><br>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="register-data">
+    <div class="container">
+      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">Register for TEDxSPIT</h2> <br><br>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -608,7 +724,7 @@ $(document).ready(function() {
             </a>
           </div>
 
-          <div class="col-lg-4 col-sm-6 col-md-4">
+          <div class="col-lg-4 col-sm-6 col-md-4" id="events">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/events.png" alt="">
               <div class="portfolio-box-caption">
@@ -623,7 +739,7 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6 col-md-4">
+          <div class="col-lg-4 col-sm-6 col-md-4" id="speakers">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/speakers.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -638,7 +754,7 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6 col-md-4">
+          <div class="col-lg-4 col-sm-6 col-md-4" id="talks">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/talks.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -653,7 +769,7 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6 col-md-4">
+          <div class="col-lg-4 col-sm-6 col-md-4" id="partners">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/partners.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -668,7 +784,7 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6 col-md-4">
+          <div class="col-lg-4 col-sm-6 col-md-4" id="register">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/reg.jpg" alt="">
               <div class="portfolio-box-caption">
