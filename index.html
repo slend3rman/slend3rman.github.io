@@ -19,7 +19,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-	
+
 	<!--Added fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
@@ -31,14 +31,14 @@
 
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
-	
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	
+
 	<!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
 
   </head>
-  
+
   <script>
 		// Set the date we're counting down to
 		var countDownDate = new Date("Feb 8, 2018 12:00:00").getTime();
@@ -61,70 +61,30 @@
 		  // Display the result in the element with id="demo"
 		  document.getElementById("counter").innerHTML = days + "d " + hours + "h "
 		  + minutes + "m " + seconds + "s ";
-		  
+
 		  //document.getElementById("tiles").innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
-		  
+
 		  document.getElementById("mu-event-counter").innerHTML = '<span class="mu-event-counter-block"><span id="days">' + days + '</span> DAYS</span> <span class="mu-event-counter-block"><span id="hours">' + hours + '</span> HOURS</span> <span class="mu-event-counter-block"><span id="mins">'+ minutes + '</span> MINS</span> <span class="mu-event-counter-block"><span id="secs">' + seconds + '</span> SECS</span>';
-		  
-		  // If the count down is finished, write some text 
+
+		  // If the count down is finished, write some text
 		  if (distance < 0) {
 			clearInterval(x);
 			document.getElementById("counter").innerHTML = "EVENT OVER";
 			document.getElementById("counter-main").innerHTML = "EVENT OVER";
 		  }
 		}, 1000);
-		
-		/*var target_date = new Date().getTime() + (1000*3600*48); // set the countdown date
-		var days, hours, minutes, seconds; // variables for time units
 
-		var countdown = document.getElementById("tiles"); // get tag element
-
-		getCountdown();
-
-		setInterval(function () { getCountdown(); }, 1000);
-
-		function getCountdown(){
-
-			// find the amount of "seconds" between now and target
-			var current_date = new Date().getTime();
-			var seconds_left = (target_date - current_date) / 1000;
-
-			days = pad( parseInt(seconds_left / 86400) );
-			seconds_left = seconds_left % 86400;
-				 
-			hours = pad( parseInt(seconds_left / 3600) );
-			seconds_left = seconds_left % 3600;
-				  
-			minutes = pad( parseInt(seconds_left / 60) );
-			seconds = pad( parseInt( seconds_left % 60 ) );
-
-			// format countdown string + set tag value
-			document.getElementById("tiles").innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>"; 
-		}
-
-		function pad(n) {
-			return (n < 10 ? '0' : '') + n;
-		}
-		
-		<div id="mu-event-counter">
-			<span class="mu-event-counter-block">
-				<span>776</span> Days</span> 
-			<span class="mu-event-counter-block"><span>02</span> Hours</span> 
-			<span class="mu-event-counter-block"><span>09</span> Mins</span> 
-			<span class="mu-event-counter-block"><span>41</span> Secs</span>
-		</div>
-		
-		*/
-		
 </script>
 
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 
 <script type="text/javascript">
-(function($) {          
-    $(document).ready(function(){ 
+(function($) {
+    $(document).ready(function(){
 		$('#mainNav').hide();
-        $(window).scroll(function(){                          
+    $('#attend-data').hide();
+    $('#Back').hide();
+        $(window).scroll(function(){
             if ($(this).scrollTop() > 200) {
                 $('#mainNav').fadeIn(500);
             } else {
@@ -132,6 +92,7 @@
             }
         });
     });
+
 })(jQuery);
 
 $(document).ready(function() {
@@ -141,6 +102,8 @@ $(document).ready(function() {
     interval: 4000,
   });
 });
+
+
 
 </script>
 
@@ -177,13 +140,13 @@ $(document).ready(function() {
 	{
 		font-family: 'Raleway', sans-serif;
 	}
-	
+
 	.product .img-responsive {
 		margin: 0 auto;
 	}
 
 	/* carousel */
-	#quote-carousel 
+	#quote-carousel
 	{
 	  padding: 0 10px 30px 10px;
 	  margin-top: 30px;
@@ -199,17 +162,17 @@ $(document).ready(function() {
 	  margin-top: 30px;
 	}
 	/* Previous button  */
-	#quote-carousel .carousel-control.left 
+	#quote-carousel .carousel-control.left
 	{
 	  left: -12px;
 	}
 	/* Next button  */
-	#quote-carousel .carousel-control.right 
+	#quote-carousel .carousel-control.right
 	{
 	  right: -12px !important;
 	}
 	/* Changes the position of the indicators */
-	#quote-carousel .carousel-indicators 
+	#quote-carousel .carousel-indicators
 	{
 	  right: 50%;
 	  top: auto;
@@ -217,11 +180,11 @@ $(document).ready(function() {
 	  margin-right: -19px;
 	}
 	/* Changes the color of the indicators */
-	#quote-carousel .carousel-indicators li 
+	#quote-carousel .carousel-indicators li
 	{
 	  background: #c0c0c0;
 	}
-	#quote-carousel .carousel-indicators .active 
+	#quote-carousel .carousel-indicators .active
 	{
 	  background: #333333;
 	}
@@ -233,7 +196,7 @@ $(document).ready(function() {
 	/* End carousel */
 
 	.item blockquote {
-		border-left: none; 
+		border-left: none;
 		margin: 0;
 	}
 
@@ -255,22 +218,22 @@ $(document).ready(function() {
 	*/
 
 	/* Small devices (tablets, 768px and up) */
-	@media (min-width: 768px) { 
-		#quote-carousel 
+	@media (min-width: 768px) {
+		#quote-carousel
 		{
 		  margin-bottom: 0;
 		  padding: 0 40px 30px 40px;
 		}
-		
+
 	}
 
 	/* Small devices (tablets, up to 768px) */
-	@media (max-width: 768px) { 
-		
+	@media (max-width: 768px) {
+
 		/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
-		
+
 		#quote-carousel .carousel-indicators {
-			bottom: -20px !important;  
+			bottom: -20px !important;
 		}
 		#quote-carousel .carousel-indicators li {
 			display: inline-block;
@@ -374,9 +337,13 @@ $(document).ready(function() {
 		font-size: 4em;
 	  }
 	}
+  #map {
+    height: 400px;
+    width: 100%;
+  }
 </style>
 
-  <body onload="hide()" id="page-top" style="font-size : 175%">
+  <body onload="initMap()" id="page-top" style="font-size : 175%">
 
 	<div id="status" style="background-color: #000000;">
 		<img align="center" src="img/xw.png" class="center-block img-responsive" alt="TEDxSPIT" style = "padding-top:20%;">
@@ -429,16 +396,16 @@ $(document).ready(function() {
               <strong></strong>
 			  <!--<strong id="counter-main"></strong>-->
             </h1>
-			
+
 			<div class="container">
 			  <div class='row'>
 				<div class='col-md-offset-0 col-md-12'>
 				  <div class="carousel slide" data-ride="carousel" id="quote-carousel">
 					<!-- Bottom Carousel Indicators -->
-					
+
 					<!-- Carousel Slides / Quotes -->
 					<div class="carousel-inner" style="font-family: 'Julius Sans One', sans-serif; font-size: 200%;">
-					
+
 					  <!-- Quote 1 -->
 					  <div class="item active">
 						<blockquote>
@@ -473,20 +440,20 @@ $(document).ready(function() {
 						</blockquote>
 					  </div>
 					</div>
-					
+
 					<!-- Carousel Buttons Next/Prev -->
 					<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
 					<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
-				  </div>                          
+				  </div>
 				</div>
 			  </div>
 			</div>
-			
+
 			<div class="mu-event-counter-area">
 			<div id="mu-event-counter" style="font-family: 'Audiowide', cursive;">
-				<!--<span class="mu-event-counter-block"><span id="days">776</span> Days</span> 
-				<span class="mu-event-counter-block"><span id="hours">02</span> Hours</span> 
-				<span class="mu-event-counter-block"><span id="mins">09</span> Mins</span> 
+				<!--<span class="mu-event-counter-block"><span id="days">776</span> Days</span>
+				<span class="mu-event-counter-block"><span id="hours">02</span> Hours</span>
+				<span class="mu-event-counter-block"><span id="mins">09</span> Mins</span>
 				<span class="mu-event-counter-block"><span id="secs">41</span> Secs</span>-->
 			</div>
 			</div>
@@ -497,7 +464,7 @@ $(document).ready(function() {
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about" style="font-size: 1.4rem;">Find Out More</a>
           </div>
       </div>
-	  </div>	
+	  </div>
     </header>
 
     <section class="bg-primary" id="about" style="
@@ -521,7 +488,7 @@ $(document).ready(function() {
 		  <h2 class="section-heading text-white text-center" style="font-family: 'Megrim', cursive;">TEDx</h2>
             <hr class="light my-4">
             <p class="text-faded mb-4">TEDx was created in the spirit of TED’s mission, “Ideas Worth Spreading” at local levels. These self-organized events are branded TEDx, where x = independently organized TED event. The program is designed to give communities, organizations and individuals the opportunity to stimulate dialogue through TED-like experiences. At a TEDx event, TEDTalks videos and live speakers combine to spark deep discussion and connection in a small group. TEDx events are open source, local and community-driven events that inspire innovation, thought leadership and visionary insight. A TEDx license is free to obtain.</p>
-            
+
 		  </div>
         </div>
 		<br><br>
@@ -539,92 +506,93 @@ $(document).ready(function() {
 	  </div>
     </section>
 
-	<!--
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">At Your Service</h2>
-            <hr class="my-4">
-          </div>
+    <script>
+    $(function() {
+
+      $("#attend").click(function(e) {
+        e.preventDefault();
+        var content = $(this).html();
+        initMap();
+        $('#links').fadeOut(300,function(){
+          $('#attend-data').fadeIn(500,function(){
+            google.maps.event.addListener(map, "idle", function(){
+                google.maps.event.trigger(map, 'resize');
+            });
+          });
+          $('#Back').fadeIn(300);
+        });
+      });
+
+      });
+    </script>
+
+    <script>
+    $(function() {
+
+      $("#Back").click(function(e) {
+        e.preventDefault();
+        var content = $(this).html();
+        $('#attend-data').fadeOut(300,function(){
+          $('#links').fadeIn(500);
+          $('#Back').fadeOut(300);
+        });
+      });
+
+      });
+    </script>
+
+	<div class="container-fluid" id="attend-data">
+    <div class="container">
+      <br><br>
+      <h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">Attend</h2> <br><br>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="map"></div>
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-4">
+          <br><br><br><br><br>
+          <p class="mb-4" style="text-align: justify;
+          text-justify: auto;">Date : February 12, 2018</p>
+          <p class="mb-4" style="text-align: justify;
+          text-justify: auto;">Time : 12 Noon</p>
+        <p class="mb-4">Venue : Sardar Patel Institute of Technology</p>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Sturdy Templates</h3>
-              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Ready to Ship</h3>
-              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Up to Date</h3>
-              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Made with Love</h3>
-              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-	-->
-	
-	<div id="myModal1" class="modal fade" role="dialog">
-					<div class="modal-dialog">
-					<!-- Modal content-->
-						<div class="modal-content no-gutters">
-							<div class="modal-header">
-								<div class="col-md-3">
-								</div>
-								<div class="col-md-6">
-								<h4 class="modal-title text-center">TEDxSPIT</h4>
-								</div>
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-							</div>
-							<div class="modal-body row">
-								<div class="col-md-3">
-								</div>
-								<div class="col-md-6" align="center">
-									<h4 align="center">Content Unavailable</h4>
-								</div>
-								<div class="col-md-3">
-								</div>
-							</div>
-							<div class="modal-body row">
-								<div class="col-md-2">
-								</div>
-								<div class="col-md-8" align="center">
-									<p>Sorry! The website is still under maintenence</p>
-								</div>
-								<div class="col-md-2">
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							</div>
-						</div>
-					</div>
-			</div>
+        <script>
+          $(document).ready(function() {
+            google.maps.event.addListener(map, "idle", function(){
+                google.maps.event.trigger(map, 'resize');
+            });
+          });
+        function initMap() {
+          var uluru = {lat: 19.130463, lng: 72.835598};
+          var cen = {lat : 19.171786, lng: 72.757622};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: cen
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+
+            google.maps.event.addListener(map, "idle", function(){
+            google.maps.event.trigger(map, 'resize');
+          });
+        }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnkSDTMK00svo3vSCDhXurwqHvwoEp_o8&callback=initMap">
+        </script>
+    </div>
+  </div>
 
     <section class="p-0" id="portfolio">
-      <div class="container-fluid p-0">
+      <div class="container-fluid p-0" id="links">
         <div class="row no-gutters">
-		<div class="col-lg-4 col-sm-6">
+		<div class="col-lg-4 col-sm-6 col-md-4" id="attend">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/loc.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -639,8 +607,8 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-		  
-          <div class="col-lg-4 col-sm-6">
+
+          <div class="col-lg-4 col-sm-6 col-md-4">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/events.png" alt="">
               <div class="portfolio-box-caption">
@@ -655,7 +623,7 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 col-md-4">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/speakers.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -670,7 +638,7 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 col-md-4">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/talks.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -685,7 +653,7 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 col-md-4">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/partners.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -700,7 +668,7 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 col-md-4">
             <a class="portfolio-box" href="#" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/reg.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -719,14 +687,8 @@ $(document).ready(function() {
       </div>
     </section>
 
-	<!--
-    <section class="bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
-      </div>
-    </section>
-	-->
+
+    <div align="center"><br><a href='#' id='Back' align="center">Go Back</a><br></div>
 
     <section id="contact">
       <div class="container">
