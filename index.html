@@ -889,11 +889,12 @@ $(document).ready(function() {
       });
 
       $("#events").click(function(){
+	    var x = $('#events').position();
+		console.log(current_selection + " top: " + x.top);
         current_selection = '#events-data';
         changeDiv(current_selection);
 		
 		if ($(window).width() < 480) {
-		var x = $(current_selection).position();
 		
 			if(x.top<400){
 				console.log(current_selection + " top: " + x.top);
