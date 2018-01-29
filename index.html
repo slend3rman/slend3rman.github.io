@@ -1001,7 +1001,7 @@ $(document).ready(function() {
 			<img class="img-responsive" src="img/speakers/nidhika.jpg" alt="">
 			<div class="overlay">
 			   <h2>Nidhika Bahl</h2>
-			   <a class="info" href="#speakers-data">Show Bio</a>
+			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalNidhika">Show Bio</a>
 			</div>
 			<br><br><h1 align="center" >Nidhika Bahl </h1>
 			<p align="center" >Life Coach </p>
@@ -1013,7 +1013,7 @@ $(document).ready(function() {
 			<img class="img-responsive" src="img/speakers/ManishAdvani.jpg" alt="">
 			<div class="overlay">
 			   <h2>Manish Advani</h2>
-			   <a class="info" href="#speakers-data">Show Bio</a>
+			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalManish">Show Bio</a>
 			</div>
 			<br><br><h1 align="center" >Manish Advani</h1>
 			<p align="center" >Head of Marketing & PR, MSSG</p>
@@ -1093,16 +1093,16 @@ $(document).ready(function() {
     </div>
   </div>
   
-  <!-- Modal for Register 
-  <div id="regModal" class="modal fade" role="dialog">
-					<div class="modal-dialog">
-					<!-- Modal content
+  <!-- Modal for Bio -->
+  <div id="bioModalNidhika" class="modal fade" role="dialog">
+					<div class="modal-dialog modal-lg">
+					<!-- Modal content-->
 						<div class="modal-content no-gutters">
 							<div class="modal-header">
 								<div class="col-md-3">
 								</div>
 								<div class="col-md-6">
-								<h4 class="modal-title text-center">TEDxSPIT</h4>
+								<h2 class="modal-title text-center">TEDxSPIT</h2>
 								</div>
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
@@ -1110,18 +1110,18 @@ $(document).ready(function() {
 								<div class="col-md-3">
 								</div>
 								<div class="col-md-6" align="center">
-									<h4 align="center">Register</h4>
+									<h2 align="center">Nidhika Bahl - Bio</h2>
 								</div>
 								<div class="col-md-3">
 								</div>
 							</div>
 							<div class="modal-body row">
-								<div class="col-md-2">
-								</div>
-								<div class="col-md-8" align="center">
-									<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexj16E5OrTvSPu0bz39G-BgjzmXSSOiR9XFW-NQF3Crt4RAw/viewform?embedded=true#start=embed" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-								</div>
-								<div class="col-md-2">
+								<div class="col-md-12" align="center">
+									<img class="img-responsive img-circle" src="img/speakers/nidhika.jpg" style="max-width : 300px; border: 5px solid red;"><br><br>
+									<p class="mb-4" style="text-align: justify;
+    text-justify: auto;">An Author. An Entrepreneur. A Life Coach.
+
+Nidhika holds the distinction of being the All Ladies League Maharashtra Chairperson for Coaching and of being the official Life Coach of Miss Diva Universe 2017 finalists - Manushi Chillar. Considered to be one of the most inspiring entrepreneurs of our time, having featured in newspapers such as The Economic Times and Mumbai Mirror.</p>
 								</div>
 							</div>
 							<div class="modal-footer">
@@ -1129,12 +1129,48 @@ $(document).ready(function() {
 							</div>
 						</div>
 					</div>
-	</div> -->
+	</div>
+	
+	<div id="bioModalManish" class="modal fade" role="dialog">
+					<div class="modal-dialog modal-lg">
+					<!-- Modal content-->
+						<div class="modal-content no-gutters">
+							<div class="modal-header">
+								<div class="col-md-3">
+								</div>
+								<div class="col-md-6">
+								<h2 class="modal-title text-center">TEDxSPIT</h2>
+								</div>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body row">
+								<div class="col-md-3">
+								</div>
+								<div class="col-md-6" align="center">
+									<h2 align="center">Manish Advani - Bio</h2>
+								</div>
+								<div class="col-md-3">
+								</div>
+							</div>
+							<div class="modal-body row">
+								<div class="col-md-12" align="center">
+									<img class="img-responsive img-circle" src="img/speakers/ManishAdvani.jpg" style="max-width : 300px; border: 5px solid red;"><br><br>
+									<p class="mb-4" style="text-align: justify;
+    text-justify: auto;">A story teller, a song writer, recognised for positioning brands in the industry through CSR and Green initiatives. Heads Marketing & Public Relations for MSSG. Bears a work experience of over 2 decades on client engagements from organizations like Microsoft, Hindustan Unilever, Jaguar & Land Rover, etc. in various roles.
+His initiative “The Coconut Project” won the International Green Apple Award for India  and has been selected for the Limca Book of Record. An honourable recipient of Microsoft President Award and various others. A gold medallist from New Jersey Institute of Technology with Summa Cum Laude. Manish has completed brand building program from Stanford and One year program from Harvard.</p>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+	</div>
 
     <section class="p-0" id="portfolio">
       <div class="container-fluid p-0" id="links">
         <div class="row no-gutters">
-		  <div class="col-lg-4 col-sm-6" id="register">
+		  <div class="col-lg-4 col-sm-5" id="register">
             <a class="portfolio-box" href="#register-data" data-toggle="modal" data-target="#regModal">
               <img class="img-fluid" src="img/portfolio/thumbnails/reg.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -1150,7 +1186,7 @@ $(document).ready(function() {
             </a>
           </div>
 
-          <div class="col-lg-4 col-sm-6" id="events">
+          <div class="col-lg-4 col-sm-5" id="events">
             <a class="portfolio-box" href="#events-data" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/events.png" alt="">
               <div class="portfolio-box-caption">
@@ -1165,7 +1201,7 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6" id="speakers">
+          <div class="col-lg-4 col-sm-5" id="speakers">
             <a class="portfolio-box" href="#speakers-data" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/speakers.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -1180,7 +1216,7 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6" id="talks">
+          <div class="col-lg-4 col-sm-5" id="talks">
             <a class="portfolio-box" href="#talks-data" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/talks.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -1195,7 +1231,7 @@ $(document).ready(function() {
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6" id="partners">
+          <div class="col-lg-4 col-sm-5" id="partners">
             <a class="portfolio-box" href="#partners-data" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/partners.jpg" alt="">
               <div class="portfolio-box-caption">
@@ -1211,7 +1247,7 @@ $(document).ready(function() {
             </a>
           </div>
 		  
-		  <div class="col-lg-4 col-sm-6" id="attend">
+		  <div class="col-lg-4 col-sm-5" id="attend">
             <a class="portfolio-box" href="#attend-data" data-toggle="modal" data-target="#myModal1">
               <img class="img-fluid" src="img/portfolio/thumbnails/loc.jpg" alt="">
               <div class="portfolio-box-caption">
