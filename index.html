@@ -940,6 +940,60 @@ $(document).ready(function() {
           $('#Back').fadeOut(300);
         });
       });
+	  
+	  $("#cReg").click(function(e) {
+        e.preventDefault();
+        var content = $(this).html();
+        $(current_selection).fadeOut(300,function(){
+          $('#links').fadeIn(500);
+          $('#Back').fadeOut(300);
+        });
+      });
+	  
+	  $("#cAtt").click(function(e) {
+        e.preventDefault();
+        var content = $(this).html();
+        $(current_selection).fadeOut(300,function(){
+          $('#links').fadeIn(500);
+          $('#Back').fadeOut(300);
+        });
+      });
+	  
+	  $("#cEve").click(function(e) {
+        e.preventDefault();
+        var content = $(this).html();
+        $(current_selection).fadeOut(300,function(){
+          $('#links').fadeIn(500);
+          $('#Back').fadeOut(300);
+        });
+      });
+	  
+	  $("#cTal").click(function(e) {
+        e.preventDefault();
+        var content = $(this).html();
+        $(current_selection).fadeOut(300,function(){
+          $('#links').fadeIn(500);
+          $('#Back').fadeOut(300);
+        });
+      });
+	  
+	  $("#cPat").click(function(e) {
+        e.preventDefault();
+        var content = $(this).html();
+        $(current_selection).fadeOut(300,function(){
+          $('#links').fadeIn(500);
+          $('#Back').fadeOut(300);
+        });
+      });
+	  
+	  $("#cSpe").click(function(e) {
+        e.preventDefault();
+        var content = $(this).html();
+        $(current_selection).fadeOut(300,function(){
+          $('#links').fadeIn(500);
+          $('#Back').fadeOut(300);
+        });
+      });
 
       });
     </script>
@@ -947,7 +1001,9 @@ $(document).ready(function() {
 	<div class="container-fluid" id="attend-data">
     <div class="container">
       <br><br>
-      <h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">ATTEND</h2> <br><br>
+      <h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">ATTEND <button type="button" class="close" aria-label="Close" id ="cAtt" style="font-size : 40px;" align="right">
+		  <span aria-hidden="true">&times;</span>
+		</button></h2> <br><br>
       <div class="row">
         <div class="col-md-6">
           <div id="map"></div>
@@ -994,7 +1050,9 @@ $(document).ready(function() {
 
   <div class="container-fluid" id="speakers-data">
     <div class="container">
-      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">Our Speakers</h2> <br><br>
+      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">Our Speakers <button type="button" class="close" aria-label="Close" id ="cSpe" style="font-size : 40px;" align="right">
+		  <span aria-hidden="true">&times;</span>
+		</button></h2> <br><br>
 	  <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 		<div class="hovereffect">
@@ -1036,7 +1094,9 @@ $(document).ready(function() {
 
   <div class="container-fluid" id="events-data">
     <div class="container">
-      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">EVENTS</h2> <br><br>
+      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">EVENTS <button type="button" class="close" aria-label="Close" id ="cEve" style="font-size : 40px;" align="right">
+		  <span aria-hidden="true">&times;</span>
+		</button></h2> <br><br>
       <div class="row">
         <div class="col-md-6">
 			<img align="center" src="img/rebuild.jpg" class="center-block img-responsive" alt="TEDxSPIT" style = "max-width: 400px; height: auto;">
@@ -1051,7 +1111,9 @@ $(document).ready(function() {
 
   <div class="container-fluid" id="partners-data">
     <div class="container">
-      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">OUR PARTNERS</h2> <br><br>
+      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">OUR PARTNERS <button type="button" class="close" aria-label="Close" id ="cPat" style="font-size : 40px;" align="right">
+		  <span aria-hidden="true">&times;</span>
+		</button></h2> <br><br>
       <div class="row">
         <div class="col-md-4">
         </div>
@@ -1065,7 +1127,9 @@ $(document).ready(function() {
 
   <div class="container-fluid" id="talks-data">
     <div class="container">
-      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">OUR TALKS</h2> <br><br>
+      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">OUR TALKS <button type="button" class="close" aria-label="Close" id ="cTal" style="font-size : 40px;" align="right">
+		  <span aria-hidden="true">&times;</span>
+		</button></h2> <br><br>
       <div class="row">
         <div class="col-md-4">
         </div>
@@ -1079,13 +1143,14 @@ $(document).ready(function() {
 
   <div class="container-fluid" id="register-data">
     <div class="container">
-      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">REGISTER FOR TEDXSPIT</h2> <br><br>
+      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">REGISTER FOR TEDXSPIT <button type="button" class="close" aria-label="Close" id ="cReg" style="font-size : 40px;" align="right">
+		  <span aria-hidden="true">&times;</span>
+		</button></h2><br><br>
       <div class="row">
         <div class="col-md-2 col-sm-2"> 
         </div>
         <div class="col-md-8 col-sm-8">
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexj16E5OrTvSPu0bz39G-BgjzmXSSOiR9XFW-NQF3Crt4RAw/viewform?embedded=true#start=embed" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0"
-			style="width:100%;">Loading...</iframe>
+			<iframe src="https://www.townscript.com/widget/tedxspit-202422" frameborder="0" height="600" width="100%"></iframe>
         </div>
         <div class="col-md-2 col-sm-2">
         </div>
