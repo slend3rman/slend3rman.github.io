@@ -877,6 +877,10 @@ $(document).ready(function() {
       $("#attend").click(function(){
         current_selection = '#attend-data';
         changeDiv(current_selection);
+		if ($(window).width() < 480) {
+				console.log(current_selection + " top: " + x.top);
+				window.scrollBy(0, -500);
+			}// Scroll up 1700px
       });
 
       $("#speakers").click(function(){
