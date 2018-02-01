@@ -850,6 +850,108 @@ $(document).ready(function() {
       </div>
 	  </div>
     </section>
+	
+	    <section class="p-0" id="portfolio">
+      <div class="container-fluid p-0" id="links">
+        <div class="row no-gutters">
+		  <div class="col-lg-4 col-sm-5" id="register">
+            <a class="portfolio-box" href="#register-data" data-toggle="modal" data-target="#regModal">
+              <img class="img-fluid" src="img/portfolio/thumbnails/reg.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    TEDxSPIT
+                  </div>
+                  <div class="project-name">
+                   REGISTER
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-sm-5" id="events">
+            <a class="portfolio-box" href="#events-data" data-toggle="modal" data-target="#myModal1">
+              <img class="img-fluid" src="img/portfolio/thumbnails/events.png" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    TEDxSPIT
+                  </div>
+                  <div class="project-name" id="counter">
+                    EVENTS
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-5" id="speakers">
+            <a class="portfolio-box" href="#speakers-data" data-toggle="modal" data-target="#myModal1">
+              <img class="img-fluid" src="img/portfolio/thumbnails/speakers.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    TEDxSPIT
+                  </div>
+                  <div class="project-name">
+                    SPEAKERS
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-5" id="talks">
+            <a class="portfolio-box" href="#talks-data" data-toggle="modal" data-target="#myModal1">
+              <img class="img-fluid" src="img/portfolio/thumbnails/talks.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    TEDxSPIT
+                  </div>
+                  <div class="project-name">
+                    TALKS
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-5" id="partners">
+            <a class="portfolio-box" href="#partners-data" data-toggle="modal" data-target="#myModal1">
+              <img class="img-fluid" src="img/portfolio/thumbnails/partners.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    TEDxSPIT
+                  </div>
+                  <div class="project-name">
+                    PARTNERS
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+		  
+		  <div class="col-lg-4 col-sm-5" id="attend">
+            <a class="portfolio-box" href="#attend-data" data-toggle="modal" data-target="#myModal1">
+              <img class="img-fluid" src="img/portfolio/thumbnails/loc.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    TEDxSPIT
+                  </div>
+                  <div class="project-name">
+                    ATTEND
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br>
+
 
     <script>
 
@@ -1051,26 +1153,104 @@ $(document).ready(function() {
         </script>
     </div>
   </div>
+  
+  <style>
+  
+	.carousel-control     		 { width:  4%; }
+.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+@media (max-width: 767px) {
+	.carousel-inner .active.left { left: -100%; }
+	.carousel-inner .next        { left:  100%; }
+	.carousel-inner .prev		 { left: -100%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
 
-  <div class="container-fluid" id="speakers-data">
-    <div class="container">
-      <br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">Our Speakers <button type="button" class="close" aria-label="Close" id ="cSpe" style="font-size : 40px;" align="right">
+}
+@media (min-width: 767px) and (max-width: 992px ) {
+	.carousel-inner .active.left { left: -50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		 { left: -50%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+	.active > div:first-child + div { display:block; }
+}
+@media (min-width: 992px ) {
+	.carousel-inner .active.left { left: -16.7%; }
+	.carousel-inner .next        { left:  16.7%; }
+	.carousel-inner .prev		 { left: -16.7%; }	
+}
+  
+  </style>
+  
+  <script>
+  
+	$(document).ready(function(){
+$('.carousel[data-type="multi"] .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  for (var i=0;i<4;i++) {
+    next=next.next();
+    if (!next.length) {
+        next = $(this).siblings(':first');
+  	}
+    
+    next.children(':first-child').clone().appendTo($(this));
+  }
+});
+});
+  
+  </script>
+
+  <div class="container" id="speakers-data">
+	
+	<br><br><h2 class="section-heading" align = "center" style="font-family: 'Megrim', cursive; font-size: 205%; font-weight: bold;">Our Speakers <button type="button" class="close" aria-label="Close" id ="cSpe" style="font-size : 40px;" align="right">
 		  <span aria-hidden="true">&times;</span>
 		</button></h2> <br><br>
+	
+		<div class="container">
+		
 	  <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 		<div class="hovereffect">
-			<img class="img-responsive" src="img/speakers/nidhika.jpg" alt="">
+			<img class="img-responsive" src="img/speakers/Rashi.jpg" alt="">
 			<div class="overlay">
-			   <h2>Nidhika Bahl</h2>
-			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalNidhika">Show Bio</a>
+			   <h2>Rashi Mal</h2>
+			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalRashi">Show Bio</a>
 			</div>
-			<br><br><h1 align="center" >Nidhika Bahl </h1>
-			<p align="center" >Life Coach </p>
+			<br><br><h1 align="center" >Rashi Mal</h1>
+			<p align="center" >Actor</p>
+		</div><br>
+	  </div>
+	  
+	   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<div class="hovereffect">
+			<img class="img-responsive" src="img/speakers/Max.jpg" alt="">
+			<div class="overlay">
+			   <h2>Max Fernandes</h2>
+			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalMax">Show Bio</a>
+			</div>
+			<br><br><h1 align="center" >Max Fernandes</h1>
+			<p align="center" >Actor</p>
+		</div><br>
+	  </div>
+	  
+	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<div class="hovereffect">
+			<img class="img-responsive" src="img/speakers/Vikas.jpg" alt="">
+			<div class="overlay">
+			   <h2>Vikas Gupta</h2>
+			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalVikas">Show Bio</a>
+			</div>
+			<br><br><h1 align="center" >Vikas Gupta</h1>
+			<p align="center" >Actor, Director, Producer</p>
 		</div>
 	  </div>
 	  
-	  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 		<div class="hovereffect">
 			<img class="img-responsive" src="img/speakers/ManishAdvani.jpg" alt="">
 			<div class="overlay">
@@ -1079,9 +1259,40 @@ $(document).ready(function() {
 			</div>
 			<br><br><h1 align="center" >Manish Advani</h1>
 			<p align="center" >Head of Marketing & PR, MSSG</p>
+		</div><br>
+	  </div>
+	 </div>
+	 
+	 <br>
+	 <br>
+	 
+	  <div class="row">
+	  
+	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="margin-bottom:0px;">
+		<div class="hovereffect">
+			<img class="img-responsive" src="img/speakers/Mohsin.jpg" alt="">
+			<div class="overlay">
+			   <h2>Mohsin Memon</h2>
+			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalMohsin">Show Bio</a>
+			</div>
+			<br><br><h1 align="center" >Mohsin Memon</h1>
+			<p align="center" >CEO, Memcorp Immersive Learning</p>
 		</div>
 	  </div>
-	  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+	  
+	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<div class="hovereffect">
+			<img class="img-responsive" src="img/speakers/Robin.png" alt="">
+			<div class="overlay">
+			   <h2>Robin</h2>
+			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalRobin">Show Bio</a>
+			</div>
+			<br><br><h1 align="center" >Robin</h1>
+			<p align="center" >LGBTQ Activist</p>
+		</div><br>
+	  </div>
+	  
+	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 		<div class="hovereffect">
 			<img class="img-responsive" src="img/speakers/swapan.jpg" alt="" >
 			<div class="overlay">
@@ -1090,7 +1301,19 @@ $(document).ready(function() {
 			</div>
 			<br><br><h1 align="center" >Swapan Rajdev</h1>
 			<p align="center" >CTO & Co-Founder, HAPTIK</p><br>
-		</div>
+		</div><br>
+	  </div>
+	  
+	        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<div class="hovereffect">
+			<img class="img-responsive" src="img/speakers/nidhika.jpg" alt="">
+			<div class="overlay">
+			   <h2>Nidhika Bahl</h2>
+			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalNidhika">Show Bio</a>
+			</div>
+			<br><br><h1 align="center" >Nidhika Bahl </h1>
+			<p align="center" >Life Coach </p>
+		</div><br>
 	  </div>
 	 </div>
     </div>
@@ -1270,112 +1493,13 @@ His initiative “The Coconut Project” won the International Green Apple Award
 						</div>
 					</div>
 	</div>
-
-    <section class="p-0" id="portfolio">
-      <div class="container-fluid p-0" id="links">
-        <div class="row no-gutters">
-		  <div class="col-lg-4 col-sm-5" id="register">
-            <a class="portfolio-box" href="#register-data" data-toggle="modal" data-target="#regModal">
-              <img class="img-fluid" src="img/portfolio/thumbnails/reg.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    TEDxSPIT
-                  </div>
-                  <div class="project-name">
-                   REGISTER
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-sm-5" id="events">
-            <a class="portfolio-box" href="#events-data" data-toggle="modal" data-target="#myModal1">
-              <img class="img-fluid" src="img/portfolio/thumbnails/events.png" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    TEDxSPIT
-                  </div>
-                  <div class="project-name" id="counter">
-                    EVENTS
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-5" id="speakers">
-            <a class="portfolio-box" href="#speakers-data" data-toggle="modal" data-target="#myModal1">
-              <img class="img-fluid" src="img/portfolio/thumbnails/speakers.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    TEDxSPIT
-                  </div>
-                  <div class="project-name">
-                    SPEAKERS
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-5" id="talks">
-            <a class="portfolio-box" href="#talks-data" data-toggle="modal" data-target="#myModal1">
-              <img class="img-fluid" src="img/portfolio/thumbnails/talks.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    TEDxSPIT
-                  </div>
-                  <div class="project-name">
-                    TALKS
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-5" id="partners">
-            <a class="portfolio-box" href="#partners-data" data-toggle="modal" data-target="#myModal1">
-              <img class="img-fluid" src="img/portfolio/thumbnails/partners.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    TEDxSPIT
-                  </div>
-                  <div class="project-name">
-                    PARTNERS
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-		  
-		  <div class="col-lg-4 col-sm-5" id="attend">
-            <a class="portfolio-box" href="#attend-data" data-toggle="modal" data-target="#myModal1">
-              <img class="img-fluid" src="img/portfolio/thumbnails/loc.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    TEDxSPIT
-                  </div>
-                  <div class="project-name">
-                    ATTEND
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <br>
-	<br>
+	
+		<br>
 	<br>
 	
 	
 	<div align="center"><br><a href='#' id='Back' align="center">Close</a><br></div>
+
 	
 	<div class="container-fluid" id="team">
     <div class="container">
