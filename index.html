@@ -1153,57 +1153,6 @@ $(document).ready(function() {
         </script>
     </div>
   </div>
-  
-  <style>
-  
-	.carousel-control     		 { width:  4%; }
-.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
-@media (max-width: 767px) {
-	.carousel-inner .active.left { left: -100%; }
-	.carousel-inner .next        { left:  100%; }
-	.carousel-inner .prev		 { left: -100%; }
-	.active > div { display:none; }
-	.active > div:first-child { display:block; }
-
-}
-@media (min-width: 767px) and (max-width: 992px ) {
-	.carousel-inner .active.left { left: -50%; }
-	.carousel-inner .next        { left:  50%; }
-	.carousel-inner .prev		 { left: -50%; }
-	.active > div { display:none; }
-	.active > div:first-child { display:block; }
-	.active > div:first-child + div { display:block; }
-}
-@media (min-width: 992px ) {
-	.carousel-inner .active.left { left: -16.7%; }
-	.carousel-inner .next        { left:  16.7%; }
-	.carousel-inner .prev		 { left: -16.7%; }	
-}
-  
-  </style>
-  
-  <script>
-  
-	$(document).ready(function(){
-$('.carousel[data-type="multi"] .item').each(function(){
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
-  
-  for (var i=0;i<4;i++) {
-    next=next.next();
-    if (!next.length) {
-        next = $(this).siblings(':first');
-  	}
-    
-    next.children(':first-child').clone().appendTo($(this));
-  }
-});
-});
-  
-  </script>
 
   <div class="container" id="speakers-data">
 	
@@ -1226,18 +1175,6 @@ $('.carousel[data-type="multi"] .item').each(function(){
 		</div><br>
 	  </div>
 	  
-	   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-		<div class="hovereffect">
-			<img class="img-responsive" src="img/speakers/Max.jpg" alt="">
-			<div class="overlay">
-			   <h2>Max Fernandes</h2>
-			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalMax">Show Bio</a>
-			</div>
-			<br><br><h1 align="center" >Max Fernandes</h1>
-			<p align="center" >Actor</p>
-		</div><br>
-	  </div>
-	  
 	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 		<div class="hovereffect">
 			<img class="img-responsive" src="img/speakers/Vikas.jpg" alt="">
@@ -1248,6 +1185,18 @@ $('.carousel[data-type="multi"] .item').each(function(){
 			<br><br><h1 align="center" >Vikas Gupta</h1>
 			<p align="center" >Actor, Director, Producer</p>
 		</div>
+	  </div>
+	  
+	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<div class="hovereffect">
+			<img class="img-responsive" src="img/speakers/Robin.jpg" alt="">
+			<div class="overlay">
+			   <h2>Robin</h2>
+			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalRobin">Show Bio</a>
+			</div>
+			<br><br><h1 align="center" >Robin</h1>
+			<p align="center" >LGBTQ Activist</p>
+		</div><br>
 	  </div>
 	  
 	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -1268,6 +1217,19 @@ $('.carousel[data-type="multi"] .item').each(function(){
 	 
 	  <div class="row">
 	  
+	  	  
+	   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<div class="hovereffect">
+			<img class="img-responsive" src="img/speakers/Max.jpg" alt="">
+			<div class="overlay">
+			   <h2>Max Fernandes</h2>
+			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalMax">Show Bio</a>
+			</div>
+			<br><br><h1 align="center" >Max Fernandes</h1>
+			<p align="center" >Actor</p>
+		</div><br>
+	  </div>
+	  
 	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="margin-bottom:0px;">
 		<div class="hovereffect">
 			<img class="img-responsive" src="img/speakers/Mohsin.jpg" alt="">
@@ -1280,17 +1242,6 @@ $('.carousel[data-type="multi"] .item').each(function(){
 		</div>
 	  </div>
 	  
-	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-		<div class="hovereffect">
-			<img class="img-responsive" src="img/speakers/Robin.png" alt="">
-			<div class="overlay">
-			   <h2>Robin</h2>
-			   <a class="info" href="#speakers-data" data-toggle="modal" data-target="#bioModalRobin">Show Bio</a>
-			</div>
-			<br><br><h1 align="center" >Robin</h1>
-			<p align="center" >LGBTQ Activist</p>
-		</div><br>
-	  </div>
 	  
 	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 		<div class="hovereffect">
@@ -1485,6 +1436,42 @@ His initiative “The Coconut Project” won the International Green Apple Award
 									<img class="img-responsive img-circle" src="img/speakers/ManishAdvani.jpg" style="max-width : 300px; border: 5px solid red;"><br><br>
 									<p class="mb-4" style="text-align: justify;
     text-justify: auto;">Swapan Rajdev is the Chief Technology Officer &  Co-founder at Haptik, one of the world’s largest chatbot platforms. He oversees the entire engineering function at Haptik which includes product development, scalability, and future vision from a technology and product perspective. Apart from this, Swapan’s focus is on the culture at Haptik. He is consistently working on new and innovative ways to make it one of the best places to work at.</p>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+	</div>
+	
+	<div id="bioModalRobin" class="modal fade" role="dialog">
+					<div class="modal-dialog modal-lg">
+					<!-- Modal content-->
+						<div class="modal-content no-gutters">
+							<div class="modal-header">
+								<div class="col-md-3 col-sm-3 col-xs-3">
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6">
+								<h2 class="modal-title text-center">TEDxSPIT</h2>
+								</div>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body row">
+								<div class="col-md-3">
+								</div>
+								<div class="col-md-6" align="center">
+									<h2 align="center">Robin Chaurasiya - Bio</h2>
+								</div>
+								<div class="col-md-3">
+								</div>
+							</div>
+							<div class="modal-body row">
+								<div class="col-md-12" align="center">
+									<img class="img-responsive img-circle" src="img/speakers/Robin.jpg" style="max-width : 300px; border: 5px solid red;"><br><br>
+									<p class="mb-4" style="text-align: justify;
+    text-justify: auto;">Robin helped organise a successful campaign to change US armed forces policy after being forced to leave her position as an Air Force officer because of her sexuality. The experience inspired her to go into teaching and to found an NGO in India called Kranti.<br><br>
+	Robin has formalised a social justice curriculum at Kranti covering key issues that affect the girls’ lives which they use to design and implement projects. In 2013, they convinced an MP to help them register sex workers to vote. They have led workshops for more than 100,000 people and delivered 11 TEDx talks around the world. They toured a play they wrote about their experiences across the USA, performing at the headquarters of Facebook and Google.</p>
 								</div>
 							</div>
 							<div class="modal-footer">
