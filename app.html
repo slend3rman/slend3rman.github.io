@@ -1,9 +1,22 @@
+<html>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
 
 <script>
 
+/*
 $.ajax({
         type: "GET",
         url: "data.csv",
@@ -11,6 +24,14 @@ $.ajax({
             $('body').append(chooseLuckyWinner(Papa.parse(data).data));
         }
     }); 
+	*/
+	
+	$(document).ready(function(){
+
+		/*$('#winner').live('click', function(e) {  
+			alert('clicked');
+		});*/
+	});
 	
 	function arrayToTable(tableData) {
         var table = $('<table></table>');
@@ -25,6 +46,35 @@ $.ajax({
         return table;
     }
 	
+	function sleep(ms) {
+	  return new Promise(resolve => setTimeout(resolve, ms));
+	}
+	
+	function getName (){
+		name = 'WINNER NAME';
+		$.ajax({
+			type: "GET",
+			url: "data.csv",
+			success: function (data) {
+				name = (chooseLuckyWinner(Papa.parse(data).data));
+			}
+		}); 
+		return name;
+	}
+	
+	async function getwinner(){
+		//alert('function call');
+		$('#modalBody').html('<div id="loader" align="center"><img src="loader.gif" alt="Loading"></div> <div id="namewin" align="center"> <h1>' + getName() + '</h1></div>');
+		$("#namewin").hide();
+		$("#myModal").modal()
+		$("#loader").fadeOut(3000, function(){
+			$("#namewin").fadeIn(1000);
+		});
+		//await sleep(5000);
+		
+		//$('#modalBody').html("Winner Name");
+	}
+	
 	function chooseLuckyWinner(tableData){
 	var winner;
 		var size = tableData.length - 1;
@@ -37,5 +87,82 @@ $.ajax({
 	}
 </script>
 
+<style>
+body {
+  background-image: url('back.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+h1 {
+  text-shadow: 10px 0 10px #FFFFFF;
+}
+
+h2 {
+  text-shadow: 10px 0 10px #FFFFFF;
+}
+
+.win{
+	background-color : #ff8000;
+	text-align : center;
+	border-color : black;
+	border-style : groove;
+	border-width : 3px;
+	border-radius : 6px;
+}
+
+a{
+	color : black;
+}
+
+a:hover {
+	color : black;
+}
+</style>
+
 <body>
+<div class="container">
+	<br><br><br><br><br><br><br>
+	<h1 align="center">CRICKET EXHIBITION MATCH</h1><br>
+	<h1 align="center">LUCKY DRAW</h1><br><br>
+	<div class="row">
+	<div class = "col-md-4">
+	</div>
+	<div class = "col-md-4">
+		<a href="#">
+		<div id="winner" class="win" onclick="getwinner()">
+		<h2> FIND WINNER </h2>
+		</div>
+		</a>
+	</div>
+	</div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">And the winner is...</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" id="modalBody">
+	
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 </body>
+
+</html>
