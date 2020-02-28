@@ -57,7 +57,7 @@ $.ajax({
 			url: "data.csv",
 			success: function (data) {
 				$('#namewin').html('<h1>' + chooseLuckyWinner(Papa.parse(data).data) + '</h1>');
-				$('#winColumn').html('<div class="win"> <h1>CONGRATS </h1> </div>' + $('#namewin').html)
+				$('#winColumn').html('<div class="win"> <h1>CONGRATS </h1> </div>' + document.getElementById("namewin").innerhtml;)
 			}
 		});
 	}
