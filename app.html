@@ -57,12 +57,12 @@ $.ajax({
 			url: "data.csv",
 			success: function (data) {
 				$('#namewin').html('<h1>' + chooseLuckyWinner(Papa.parse(data).data) + '</h1>');
-				$('#winColumn').html('<div class="win"> <h1>CONGRATS </h1> </div>' + document.getElementById("namewin").innerhtml;)
+				$('#winColumn').html('<div class="win"> <h1>CONGRATS </h1> </div>' + document.getElementById("namewin").innerhtml);
 			}
 		});
 	}
 	
-	function getwinner(){
+	async function getwinner(){
 		//alert('function call');
 		$('#modalBody').html('<div id="loader" align="center"><img src="loader.gif" alt="Loading"></div> <div id="namewin" align="center"></div>');
 		$("#namewin").hide();
