@@ -28,8 +28,9 @@ $.ajax({
 	function chooseLuckyWinner(tableData){
 	var winner;
 		var table = $('<table></table>');
-		var size = tableData.length;
-		var rec = Math.floor((Math.random() * length));
+		var size = tableData.length -1;
+		alert('size is : ' + size);
+		var rec = Math.floor((Math.random() * size) + 1);
 		winner = $('<tr></tr>');
 		$(tableData[rec]).each(function (j, cellData) {
                 winner.append($('<td>'+cellData+'</td>'));
