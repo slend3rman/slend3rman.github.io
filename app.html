@@ -57,6 +57,7 @@ $.ajax({
 			url: "data.csv",
 			success: function (data) {
 				$('#namewin').html('<h1>' + chooseLuckyWinner(Papa.parse(data).data) + '</h1>');
+				$('#winColumn').html('<div class="win"> <h1>CONGRATS </h1> </div>' + $('#namewin').html)
 			}
 		});
 	}
@@ -95,6 +96,10 @@ body {
   background-size: 100% 100%;
 }
 
+.animation{
+
+}
+
 h1 {
   text-shadow: 10px 0 10px #FFFFFF;
 }
@@ -123,19 +128,23 @@ a:hover {
 
 <body>
 <div class="container">
-	<br><br><br><br><br><br><br>
-	<h1 align="center">CRICKET EXHIBITION MATCH</h1><br>
+	<br><br><br><br><br>
+	<h1 align="center">EXHIBITION CRICKET MATCH</h1><br>
 	<h1 align="center">LUCKY DRAW</h1><br><br>
 	<div class="row">
 	<div class = "col-md-4">
 	</div>
-	<div class = "col-md-4">
+	<div class = "col-md-4" id="winColumn">
 		<a href="#">
 		<div id="winner" class="win" onclick="getwinner()">
 		<h2> FIND WINNER </h2>
 		</div>
 		</a>
 	</div>
+	</div>
+	<div id="animation" align="center">
+		<br>
+		<img src="cricket.gif" alt="cricket_match">
 	</div>
 </div>
 
