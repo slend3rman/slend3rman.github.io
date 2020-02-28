@@ -3,13 +3,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
 
 <script>
+
 $.ajax({
         type: "GET",
         url: "data.csv",
         success: function (data) {
-            $('body').append(arrayToTable(Papa.parse(data).data));
+            $('body').append(chooseLuckyWinner(Papa.parse(data).data));
         }
-    });
+    }); 
 	
 	function arrayToTable(tableData) {
         var table = $('<table></table>');
@@ -20,9 +21,22 @@ $.ajax({
             });
             table.append(row);
         });
-		alert(table);
+		//echo(table);
         return table;
     }
+	
+	function chooseLuckyWinner(tableData){
+	var winner;
+		var table = $('<table></table>');
+		var size = tableData.length;
+		var rec = Math.floor((Math.random() * length));
+		winner = $('<tr></tr>');
+		$(tableData[rec]).each(function (j, cellData) {
+                winner.append($('<td>'+cellData+'</td>'));
+            });
+		table.append(winner);
+		return table;
+	}
 </script>
 
 <body>
