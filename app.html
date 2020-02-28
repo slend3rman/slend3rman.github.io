@@ -31,9 +31,8 @@ $.ajax({
 		alert('size is : ' + size);
 		var rec = Math.floor((Math.random() * size) + 1);
 		winner = $('');
-		$(tableData[rec]).each(function (j, cellData) {
-                winner.append($(cellData));
-            });
+		winner = tableData[rec][0] + ' ' + tableData[rec][1];
+		alert('winner is : ' + winner);
 		return winner;
 	}
 </script>
