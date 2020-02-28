@@ -56,18 +56,18 @@ $.ajax({
 			type: "GET",
 			url: "data.csv",
 			success: function (data) {
-				name = (chooseLuckyWinner(Papa.parse(data).data));
+				$('#namewin').html('<h1>' + chooseLuckyWinner(Papa.parse(data).data) + '</h1>');
 			}
-		}); 
-		return name;
+		});
 	}
 	
 	async function getwinner(){
 		//alert('function call');
-		$('#modalBody').html('<div id="loader" align="center"><img src="loader.gif" alt="Loading"></div> <div id="namewin" align="center"> <h1>' + getName() + '</h1></div>');
+		$('#modalBody').html('<div id="loader" align="center"><img src="loader.gif" alt="Loading"></div> <div id="namewin" align="center"></div>');
 		$("#namewin").hide();
 		$("#myModal").modal()
 		$("#loader").fadeOut(3000, function(){
+			getName();
 			$("#namewin").fadeIn(1000);
 		});
 		//await sleep(5000);
@@ -78,11 +78,11 @@ $.ajax({
 	function chooseLuckyWinner(tableData){
 	var winner;
 		var size = tableData.length - 1;
-		alert('size is : ' + size);
+		//alert('size is : ' + size);
 		var rec = Math.floor((Math.random() * size) + 1);
 		winner = $('');
 		winner = tableData[rec][0] + ' ' + tableData[rec][1];
-		alert('winner is : ' + winner);
+		//alert('winner is : ' + winner);
 		return winner;
 	}
 </script>
